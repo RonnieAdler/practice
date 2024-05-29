@@ -58,7 +58,7 @@ void solve(){
 
     for(int i=2;i<=n;i++){
         int modInvVal=modInv(fact[i],mod);
-        int s= ((fact[n]%mod) * (modInvVal % mod)) % mod;
+        int s= ((fact[n]%mod) * (modInvVal % mod)) % mod;        //modmultiplication
         if(sign ==1){
             answer=((answer%mod)+(s%mod)) % mod;
 
@@ -78,3 +78,6 @@ signed main(){
     solve();
 
 }
+
+//tc= O(N*log N)
+//sc= O(N)
